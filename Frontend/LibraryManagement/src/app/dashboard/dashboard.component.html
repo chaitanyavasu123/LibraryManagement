@@ -1,0 +1,40 @@
+<div>
+  <!-- Logout button and tokens available -->
+  <button (click)="logout()">Logout</button>
+  <div>Tokens Available: {{ tokensAvailable }}</div>
+
+  <!-- Profile button -->
+  <button (click)="goToProfile()">Profile</button>
+
+  <h2>Available Books</h2>
+
+  <!-- <div *ngFor="let book of availableBooks">
+    {{ book.name }} - {{ book.author }}
+
+    <button (click)="viewBookDetails(book.id)">View Details</button>
+    <button (click)="borrowBook(book.id)">Borrow</button>
+  </div> -->
+  <div class="book-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of availableBooks">
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+          <td>
+            <button (click)="viewBookDetails(book.id)">View</button>
+            <button (click)="borrowBook(book.id)">Borrow</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

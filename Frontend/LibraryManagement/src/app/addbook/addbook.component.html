@@ -1,0 +1,50 @@
+<div class="library-container">
+  <p>Add Book Details</p>
+  <button (click)="comeback()">Back</button>
+  <!-- Your HTML template for the AddBook component -->
+  <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()">
+    <!-- Input fields for book details -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required />
+    <div *ngIf="name?.hasError('required')" style="color: red">
+      Name is required.
+    </div>
+
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" formControlName="rating" required />
+    <div *ngIf="rating?.hasError('required')" style="color: red">
+      Rating is required.
+    </div>
+    <div
+      *ngIf="rating?.hasError('min') || rating?.hasError('max')"
+      style="color: red"
+    >
+      Rating must be between 0 and 5.
+    </div>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" formControlName="author" required />
+    <div *ngIf="author?.hasError('required')" style="color: red">
+      Author is required.
+    </div>
+
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" formControlName="genre" required />
+    <div *ngIf="genre?.hasError('required')" style="color: red">
+      Genre is required.
+    </div>
+
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      required
+    ></textarea>
+    <div *ngIf="description?.hasError('required')" style="color: red">
+      Description is required.
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit">Add Book</button>
+  </form>
+</div>

@@ -1,0 +1,53 @@
+<!-- home.component.html -->
+<body>
+  <div class="library-container">
+    <h2>Welcome to the Library</h2>
+    <div>
+      <button routerLink="/login" *ngIf="!isLoggedIn">Login</button>
+      <input
+        type="text"
+        id="search"
+        (input)="onSearchChange($event)"
+        placeholder="Search Books"
+      />
+    </div>
+    <!-- <div>
+    <h3>{{ book.name }}</h3>
+    <p>{{ book.author }}</p>
+    <p>{{ book.genre }}</p>
+    <button (click)="onBorrowClick(book.id)">Borrow</button>
+  </div> -->
+    <!-- home.component.html -->
+    <div>
+      <!-- Display the filtered books -->
+      <div *ngFor="let book of displayedBooks">
+        {{ book.name }} - {{ book.author }}
+        <button (click)="viewBook(book.id)">View</button>
+        <button (click)="onBorrowClick(book.id)">Borrow</button>
+      </div>
+    </div>
+    <div class="book-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <td>{{ book.name }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.genre }}</td>
+            <td>
+              <button (click)="viewBook(book.id)">View</button>
+              <button (click)="onBorrowClick(book.id)">Borrow</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

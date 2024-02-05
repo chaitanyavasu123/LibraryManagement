@@ -1,0 +1,42 @@
+/* login.component.css (or your preferred style file) */
+
+div {
+    max-width: 400px; /* Adjust the maximum width of your login container */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Set a light background color */
+    border-radius: 8px; /* Add some border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  }
+  
+  button {
+    background-color: #3498db; /* Set a blue color for the button */
+    color: #fff; /* Set white text color for the button */
+    padding: 10px 15px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Change button color on hover */
+  }
+  
+  form {
+    margin-top: 20px; /* Add some space between the form and other elements */
+  }
+  
+  label {
+    display: block; /* Make labels block-level for proper spacing */
+    margin-bottom: 5px; /* Add space between labels and input fields */
+  }
+  
+  input {
+    width: 100%; /* Make input fields fill the entire width of the container */
+    padding: 8px; /* Add padding to input fields */
+    margin-bottom: 10px; /* Add space between input fields */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  /* Add other styles or adjustments as needed */
+  

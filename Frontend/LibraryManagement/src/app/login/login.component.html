@@ -1,0 +1,28 @@
+<!-- login.component.html -->
+
+<div>
+  <button (click)="comeback()">Back</button>
+  <h2>Login</h2>
+  <div *ngIf="errorMessage" style="color: red">{{ errorMessage }}</div>
+  <form (ngSubmit)="login()">
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      id="username"
+      [(ngModel)]="username"
+      name="username"
+      required
+    />
+
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      [(ngModel)]="password"
+      name="password"
+      required
+    />
+
+    <button type="submit">Login</button>
+  </form>
+</div>

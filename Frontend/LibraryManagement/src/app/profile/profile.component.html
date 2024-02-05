@@ -1,0 +1,105 @@
+<!-- profile.component.html -->
+<div class="library-container">
+  <h2>Profile</h2>
+  <div>
+    <button (click)="comeback()" style="display: inline-block">Back</button>
+    <button (click)="logout()" style="display: inline-block">Logout</button>
+    <button (click)="addbook()">Add Book</button>
+  </div>
+  <p>Tokens Available: {{ tokens }}</p>
+
+  <h3>Borrowed Books</h3>
+
+  <!-- <div *ngFor="let book of userborrowedBooks">
+    <div>
+      <h2>{{ book.id }}</h2>
+      <h2>{{ book.name }}</h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Genre:</strong> {{ book.genre }}</p>
+      <button (click)="returnBook(book)">Return</button>
+    </div>
+  </div> -->
+  <div class="book-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of userborrowedBooks">
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+          <td>
+            <button (click)="returnBook(book)">Return</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Lent Books</h3>
+  <!-- <div *ngFor="let book of userlentBooks">
+    <div>
+      <h2>{{ book.id }}</h2>
+      <h2>{{ book.name }}</h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Genre:</strong> {{ book.genre }}</p>
+    </div>
+  </div> -->
+  <div class="book-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of userlentBooks">
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h3>Added Books</h3>
+  <!-- <div *ngFor="let book of useraddedBooks">
+    <div>
+      <h2>{{ book.id }}</h2>
+      <h2>{{ book.name }}</h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Genre:</strong> {{ book.genre }}</p>
+    </div> -->
+  <!-- </div> -->
+  <div class="book-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Genre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of useraddedBooks">
+          <td>{{ book.id }}</td>
+          <td>{{ book.name }}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.genre }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

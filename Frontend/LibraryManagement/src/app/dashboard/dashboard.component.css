@@ -1,0 +1,50 @@
+/* dashboard.component.css (or your preferred style file) */
+
+div {
+    max-width: 800px; /* Adjust the maximum width of your dashboard container */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px;
+    /* background-color: #f9f9f9; Set a light background color */
+    border-radius: 8px; /* Add some border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  }
+  
+  button {
+    background-color: #3498db; /* Set a blue color for the button */
+    color: #fff; /* Set white text color for the button */
+    padding: 10px 15px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    margin-right: 10px; /* Add space between buttons */
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Change button color on hover */
+  }
+  
+  h2 {
+    color: #333; /* Set the heading color */
+  }
+  
+  /* Adjustments for book details section */
+  div *ngFor {
+    margin-bottom: 15px; /* Add space between each book entry */
+  }
+  .book-table {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* To prevent child elements from overflowing */
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  /* Add other styles or adjustments as needed */
+  

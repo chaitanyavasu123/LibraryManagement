@@ -1,0 +1,22 @@
+<body>
+  <div class="library-container">
+    <button *ngIf="isLoggedIn()" (click)="comeback()">Back</button>
+    <button *ngIf="!isLoggedIn()" (click)="comehome()">Back</button>
+    <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+    <div *ngIf="book">
+      <h2>{{ book.name }}</h2>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Genre:</strong> {{ book.genre }}</p>
+      <p><strong>Rating:</strong> {{ book.rating }}</p>
+      <p><strong>Description:</strong> {{ book.description }}</p>
+      <p><strong>OwnerId:</strong> {{ book.ownerId }}</p>
+      <!-- Assuming you have owner details in the book model -->
+      <p>
+        <strong>Availability:</strong>
+        {{ book.isBookAvailable ? "Available" : "Not Available" }}
+      </p>
+      <button (click)="borrowBook(bookId)">Borrow</button>
+      <!-- You can add more details here as needed -->
+    </div>
+  </div>
+</body>
